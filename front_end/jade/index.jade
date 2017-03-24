@@ -1,0 +1,43 @@
+doctype
+head
+  title МНК
+  meta(charset='utf-8')
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  link(rel="stylesheet", href="./static/css/style.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS_HTML-full")
+body
+  .container
+    h1 Метод найменших квадратів
+    form
+      div.form-group
+        label(for="function") Функція
+        input.form-control(type="text" id="function")
+      div.form-group
+        label(for="deg") Степінь
+        input.form-control(type="number" id="deg")
+      
+      div.form-group
+        label(for="start") Початок
+        input.form-control(type="number" id="start")
+
+      div.form-group
+        label(for="end") Кінець
+        input.form-control(type="number" id="end")
+
+      div.form-group
+        label(for="points_ctn") Кількість точок
+        input.form-control(type="number" id="points_ctn")
+
+      div.form-group
+        label(for="after_point") Кількість знаків після коми в коефіцієнтах
+        input.form-control(type="number" id="after_point")
+
+      button.btn.btn-success(type="submit" id="btn-find") Знайти
+    h4#formula
+    h4#max_err
+    h4#x_max_err
+    #plot
+    
+  script(src="https://cdn.plot.ly/plotly-latest.min.js")
+  script(src='./static/js/all.js')
